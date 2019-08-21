@@ -15,7 +15,7 @@ Class User extends Model{
 
     public static function getFromSession(){
 
-    	$user= new User();
+    	$user = new User();
 
     	if(isset($_SESSION[User::SESSION]) && (int)$_SESSION[User::SESSION]['iduser'] > 0){
 
@@ -49,7 +49,7 @@ Class User extends Model{
     		} else{
 
     			return false;
-    			
+
     		}
 
     	}
