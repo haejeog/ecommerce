@@ -3,6 +3,8 @@
 use \hcodebr\Page;
 use \hcodebr\Model\Product;
 use \hcodebr\Model\Category;
+use \hcodebr\Model\Cart;
+
 
 $app->get('/', function() {
 
@@ -57,6 +59,15 @@ $app->get("/products/:desurl", function($desurl){
 		'categories'=>$product->getCategories()
 	]);
 
+});
+
+$app->get("/cart", function(){
+
+	 $cart = Cart::getFromSession();
+     
+     $page = new Page();
+
+     $page->setTpl("cart");
 });
 
 
