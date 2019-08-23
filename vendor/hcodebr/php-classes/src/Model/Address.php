@@ -65,4 +65,4 @@ class Address extends Model {
     $_SESSION[Address::SESSION_ERROR] = NULL;
   }
 }
- ?>
+?>

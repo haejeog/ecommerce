@@ -16,8 +16,8 @@
 <section class="content">
 
   <div class="row">
-  	<div class="col-md-12">
-  		<div class="box box-success">
+    <div class="col-md-12">
+      <div class="box box-success">
         <div class="box-header with-border">
           <h3 class="box-title">Novo Categoria</h3>
         </div>
@@ -36,7 +36,7 @@
           </div>
         </form>
       </div>
-  	</div>
+    </div>
   </div>
 
 </section>

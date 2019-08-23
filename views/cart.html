@@ -20,11 +20,13 @@
                     <div class="woocommerce">
 
                         <form action="/checkout">
+                            
                             {if="$error != ''"}
                             <div class="alert alert-danger" role="alert">
-                            {$error}
+                                {$error}
                             </div>
                             {/if}
+
                             <table cellspacing="0" class="shop_table cart">
                                 <thead>
                                     <tr>
@@ -80,7 +82,7 @@
                                     <div class="coupon">
                                         <label for="cep">CEP:</label>
                                         <input type="text" placeholder="00000-000" value="{$cart.deszipcode}" id="cep" class="input-text" name="zipcode">
-                                        <input type="submit" formmethod="post" formaction="/cart/freight" value="CALCULAR" class="button">
+                                        <input type="submit" formmethod="post" formaction="/cart/freight" value="CÁLCULAR" class="button">
                                     </div>
 
                                 </div>
@@ -93,12 +95,12 @@
                                         <tbody>
                                             <tr class="cart-subtotal">
                                                 <th>Subtotal</th>
-                                                <td>{if="$cart.vlsubtotal > 0"}<span class="amount">R${function="formatPrice($cart.vlsubtotal)"}</span>{/if}</td>
+                                                <td><span class="amount">R${function="formatPrice($cart.vlsubtotal)"}</span></td>
                                             </tr>
 
                                             <tr class="shipping">
                                                 <th>Frete</th>
-                                                 <td>R${function="formatPrice($cart.vlfreight)"}{if="$cart.nrdays > 0"} <small>prazo de {$cart.nrdays} dia(s)</small>{/if}</td>
+                                                <td>R${function="formatPrice($cart.vlfreight)"}{if="$cart.nrdays > 0"} <small>prazo de {$cart.nrdays} dia(s)</small>{/if}</td>
                                             </tr>
 
                                             <tr class="order-total">
